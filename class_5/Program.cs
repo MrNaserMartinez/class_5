@@ -28,7 +28,7 @@ Console.WriteLine("El mayor número ingresado es: " + mayor);
 Console.WriteLine("El menor número ingresado es: " + menor);
 Console.ReadLine();
 
-
+//ejercicio #2
 Console.WriteLine("Piensa en un número");
 Console.WriteLine("Sigue las instrucciones y te adivinaré el número que has pensado.");
 Console.Write("Escribe un número: ");
@@ -42,6 +42,8 @@ resultadoString = resultadoString.Substring(0, resultadoString.Length - 1);
 resultadoFinal = int.Parse(resultadoString) - 4;
 Console.WriteLine($"El número que pensaste es: {resultadoFinal} jejeje");
 
+
+//ejercicio #3
 Console.WriteLine("Ingrese una frase:");
 string frase = Console.ReadLine();
 int contadorPalabras = 0;
@@ -72,3 +74,27 @@ while (indice < frase.Length)
 }
 Console.WriteLine($"Número de palabras en la frase: {contadorPalabras}");
 Console.WriteLine($"Número de vocales en la frase: {contadorVocales}");
+
+//ejercicio #4
+
+Console.WriteLine("Ingrese una palabra:");
+string palabra = Console.ReadLine();
+bool esPalindromo = true;
+
+for (int i = 0; i < palabra.Length / 2; i++)
+{
+    if (palabra[i] != palabra[palabra.Length - 1 - i])
+    {
+        esPalindromo = false;
+        break;
+    }
+}
+
+if (esPalindromo)
+{
+    Console.WriteLine("La palabra '" + palabra + "' es un palíndromo.");
+}
+else
+{
+    Console.WriteLine("La palabra '" + palabra + "' no es un palíndromo.");
+}
